@@ -27432,9 +27432,7 @@ var _resturantCard = require("./ResturantCard");
 var _resturantCardDefault = parcelHelpers.interopDefault(_resturantCard);
 var _s = $RefreshSig$();
 function filterData(searchTxt, restaurants) {
-    const filterData = restaurants.filter((restaurant)=>{
-        restaurant?.data?.name.includes(searchTxt);
-    });
+    const filterData = restaurants.filter((restaurant)=>restaurant?.data?.name.includes(searchTxt));
     return filterData;
 }
 const Body = ()=>{

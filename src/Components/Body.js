@@ -3,9 +3,9 @@ import { restaurantList } from "../config";
 import ResturantCard from "./ResturantCard";
 
 function filterData(searchTxt, restaurants) {
-  const filterData = restaurants.filter((restaurant) => {
-    restaurant?.data?.name.includes(searchTxt);
-  });
+  const filterData = restaurants.filter((restaurant) =>
+    restaurant?.data?.name.includes(searchTxt)
+  );
   return filterData;
 }
 
