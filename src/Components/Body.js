@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { restaurantList } from "../config";
+import { useEffect, useState } from "react";
 import ResturantCard from "./ResturantCard";
+import ShimmerUI from "./ShimmerUI";
 
 function filterData(searchTxt, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
@@ -10,10 +10,25 @@ function filterData(searchTxt, restaurants) {
 }
 
 const Body = () => {
-  const [restaurants, setRestaurants] = useState(restaurantList);
+  const [restaurants, setRestaurants] = useState([]);
   const [searchTxt, setSearchTxt] = useState("");
-  console.log(restaurants);
-  return (
+
+  useEffect(() => {
+    getRestaurants();
+  }, []);
+
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9810451&lng=72.82675789999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    console.log(json);
+    setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+  }
+
+  return restaurants.length === 0 ? (
+    <ShimmerUI />
+  ) : (
     <>
       <div className="search-container">
         <input
