@@ -68,3 +68,10 @@
   align-items: center;
   margin-bottom: 2rem;
 }
+
+.shimmer-cards {
+  width: 272px;
+  height: 175px;
+  margin-left: 2rem;
+  background-color: lightgray;
+}

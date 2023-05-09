@@ -1,3 +1,13 @@
-const ShimmerUI = () => <h1>ShimmerUI is Loading........</h1>;
+const ShimmerUI = () => (
+  <>
+    <div className="resturantcard">
+      {Array(12)
+        .fill("")
+        .map((e, index) => (
+          <div key={index} className="shimmer-cards"></div>
+        ))}
+    </div>
+  </>
+);
 
 export default ShimmerUI;

@@ -1,3 +1,11 @@
+import React, { useEffect } from "react";
+import { useState } from "react";
+import Logo from "../assest/img/logo.jpg";
+
+// const loggedInUser = () => {
+//   return true;
+// };
+
 const Title = () => (
   <a href="/">
     <img
@@ -9,6 +17,13 @@ const Title = () => (
 );
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // useEffect(() => {
+  //   console.log("UseEffect");
+  // }, []);
+
+  // console.log("Render");
   return (
     <div className="header">
       <Title />
@@ -20,6 +35,11 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+      {isLoggedIn ? (
+        <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+      ) : (
+        <button onClick={() => setIsLoggedIn(true)}>Login</button>
+      )}
     </div>
   );
 };

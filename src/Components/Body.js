@@ -4,13 +4,14 @@ import ShimmerUI from "./ShimmerUI";
 
 function filterData(searchTxt, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
-    restaurant?.data?.name.includes(searchTxt)
+    restaurant?.data?.name?.toLowerCase().includes(searchTxt.toLowerCase())
   );
   return filterData;
 }
 
 const Body = () => {
-  const [restaurants, setRestaurants] = useState([]);
+  const [allRestaurants, setAllRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchTxt, setSearchTxt] = useState("");
 
   useEffect(() => {
@@ -23,10 +24,11 @@ const Body = () => {
     );
     const json = await data.json();
     console.log(json);
-    setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
-  return restaurants.length === 0 ? (
+  return allRestaurants.length === 0 ? (
     <ShimmerUI />
   ) : (
     <>
@@ -43,8 +45,8 @@ const Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterData(searchTxt, restaurants);
-            setRestaurants(data);
+            const data = filterData(searchTxt, allRestaurants);
+            setFilteredRestaurants(data);
             console.log(data);
           }}
         >
@@ -52,7 +54,7 @@ const Body = () => {
         </button>
       </div>
       <div className="resturantcard">
-        {restaurants.map((restaurant) => {
+        {filteredRestaurants.map((restaurant) => {
           return (
             <ResturantCard {...restaurant.data} key={restaurant.data.id} />
           );
