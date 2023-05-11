@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import Logo from "../assest/img/logo.jpg";
+import { Link } from "react-router-dom";
+// import Logo from "../assest/img/logo.jpg";
 
 // const loggedInUser = () => {
 //   return true;
@@ -29,9 +30,16 @@ const Header = () => {
       <Title />
       <div className="nva-items">
         <ul className="nva-items">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contect</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <Link to="/about">
+            <li>About</li>
+          </Link>
+
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
           <li>Cart</li>
         </ul>
       </div>

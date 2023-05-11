@@ -2941,21 +2941,25 @@ var _about = require("./Components/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _error = require("./Components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
+var _contact = require("./Components/Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _resturantMenu = require("./Components/ResturantMenu");
+var _resturantMenuDefault = parcelHelpers.interopDefault(_resturantMenu);
 const AppLayOut = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 5
             }, undefined)
         ]
@@ -2966,22 +2970,48 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayOut, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 21,
+            lineNumber: 23,
             columnNumber: 14
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 22,
+            lineNumber: 24,
             columnNumber: 19
-        }, undefined)
-    },
-    {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 26,
-            columnNumber: 14
-        }, undefined)
+        }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 28,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 33,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 37,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/resturant/:resid",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resturantMenuDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 41,
+                    columnNumber: 18
+                }, undefined)
+            }
+        ]
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
@@ -2989,7 +3019,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 31,
+    lineNumber: 48,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3000,7 +3030,7 @@ $RefreshReg$(_c, "AppLayOut");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Components/Header":"fNIx6","./Components/Body":"6J35F","./Components/Footer":"eUZ6J","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./Components/About":"19tXb","./Components/Error":"iQH4s"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Components/Header":"fNIx6","./Components/Body":"6J35F","./Components/Footer":"eUZ6J","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./Components/About":"19tXb","./Components/Error":"iQH4s","./Components/Contact":"66EYZ","./Components/ResturantMenu":"dDQnB"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("a1f6c22737677b19");
 
@@ -27197,9 +27227,9 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _logoJpg = require("../assest/img/logo.jpg");
-var _logoJpgDefault = parcelHelpers.interopDefault(_logoJpg);
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
+// import Logo from "../assest/img/logo.jpg";
 // const loggedInUser = () => {
 //   return true;
 // };
@@ -27211,12 +27241,12 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             alt: "logo"
         }, void 0, false, {
             fileName: "src/Components/Header.js",
-            lineNumber: 11,
+            lineNumber: 12,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Header.js",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 3
     }, undefined);
 _c = Title;
@@ -27232,7 +27262,7 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/Components/Header.js",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27241,42 +27271,63 @@ const Header = ()=>{
                     className: "nva-items",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/Components/Header.js",
-                            lineNumber: 32,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/Components/Header.js",
+                                lineNumber: 34,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
                             lineNumber: 33,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contect"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/about",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "About"
+                            }, void 0, false, {
+                                fileName: "src/Components/Header.js",
+                                lineNumber: 37,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 34,
+                            lineNumber: 36,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/Components/Header.js",
+                                lineNumber: 41,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/Components/Header.js",
+                            lineNumber: 40,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 35,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.js",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Header.js",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             isLoggedIn ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27284,20 +27335,20 @@ const Header = ()=>{
                 children: "Logout"
             }, void 0, false, {
                 fileName: "src/Components/Header.js",
-                lineNumber: 39,
+                lineNumber: 47,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>setIsLoggedIn(true),
                 children: "Login"
             }, void 0, false, {
                 fileName: "src/Components/Header.js",
-                lineNumber: 41,
+                lineNumber: 49,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Header.js",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
 };
@@ -27313,44 +27364,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assest/img/logo.jpg":"c8Smz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c8Smz":[function(require,module,exports) {
-module.exports = require("d4709b9c0b299fce").getBundleURL("aXMci") + "logo.fe8577d9.jpg" + "?" + Date.now();
-
-},{"d4709b9c0b299fce":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27513,897 +27527,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"e147e6500943b575":"786KC"}],"6J35F":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4f14 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4f14.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _resturantCard = require("./ResturantCard");
-var _resturantCardDefault = parcelHelpers.interopDefault(_resturantCard);
-var _shimmerUI = require("./ShimmerUI");
-var _shimmerUIDefault = parcelHelpers.interopDefault(_shimmerUI);
-var _s = $RefreshSig$();
-function filterData(searchTxt, restaurants) {
-    const filterData = restaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase().includes(searchTxt.toLowerCase()));
-    return filterData;
-}
-const Body = ()=>{
-    _s();
-    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
-    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
-    const [searchTxt, setSearchTxt] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        getRestaurants();
-    }, []);
-    async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9810451&lng=72.82675789999999&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        console.log(json);
-        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    }
-    return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUIDefault.default), {}, void 0, false, {
-        fileName: "src/Components/Body.js",
-        lineNumber: 32,
-        columnNumber: 5
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "search-input",
-                        placeholder: "Search ",
-                        value: searchTxt,
-                        onChange: (e)=>{
-                            setSearchTxt(e.target.value);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/Components/Body.js",
-                        lineNumber: 36,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "search-btn",
-                        onClick: ()=>{
-                            const data = filterData(searchTxt, allRestaurants);
-                            setFilteredRestaurants(data);
-                            console.log(data);
-                        },
-                        children: "Search"
-                    }, void 0, false, {
-                        fileName: "src/Components/Body.js",
-                        lineNumber: 45,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/Components/Body.js",
-                lineNumber: 35,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "resturantcard",
-                children: filteredRestaurants.map((restaurant)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)((0, _resturantCardDefault.default), {
-                        ...restaurant.data,
-                        key: restaurant.data.id,
-                        __source: {
-                            fileName: "src/Components/Body.js",
-                            lineNumber: 59,
-                            columnNumber: 13
-                        },
-                        __self: undefined
-                    });
-                })
-            }, void 0, false, {
-                fileName: "src/Components/Body.js",
-                lineNumber: 56,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Body, "ApHfAgyhbqNvuDX5I3Xz/IQ3J+0=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$4f14.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ResturantCard":"iUqLI","./ShimmerUI":"2hlhr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iUqLI":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$688d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$688d.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _config = require("../config");
-const ResturantCard = ({ name , cuisines , cloudinaryImageId , lastMileTravelString  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _config.IMG_CDN_URL) + cloudinaryImageId,
-                alt: "card"
-            }, void 0, false, {
-                fileName: "src/Components/ResturantCard.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: name
-            }, void 0, false, {
-                fileName: "src/Components/ResturantCard.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines.join(",")
-            }, void 0, false, {
-                fileName: "src/Components/ResturantCard.js",
-                lineNumber: 13,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    lastMileTravelString,
-                    " minuts"
-                ]
-            }, void 0, true, {
-                fileName: "src/Components/ResturantCard.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/Components/ResturantCard.js",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined);
-};
-_c = ResturantCard;
-exports.default = ResturantCard;
-var _c;
-$RefreshReg$(_c, "ResturantCard");
-
-  $parcel$ReactRefreshHelpers$688d.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../config":"jtCLN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtCLN":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
-parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
-const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const restaurantList = [
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "601046",
-            name: "Vada Bhau",
-            uuid: "06e71d74-04fd-4324-8817-de3dc4e7d24e",
-            city: "4",
-            area: "Rohini",
-            totalRatingsString: "Too Few Ratings",
-            cloudinaryImageId: "vpxbet2mev3wxp4but0a",
-            cuisines: [
-                "Street Food",
-                "Snacks"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 40,
-            minDeliveryTime: 40,
-            maxDeliveryTime: 40,
-            slaString: "40 MINS",
-            lastMileTravel: 0.8999999761581421,
-            slugs: {
-                restaurant: "vada-bhau-rohini-rohini",
-                city: "delhi"
-            },
-            cityState: "4",
-            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
-            locality: "Sector 2",
-            parentId: 356053,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "15% off",
-                shortDescriptionList: [
-                    {
-                        meta: "15% off | Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "15% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "15% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "15% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 3800,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 3800,
-                message: "",
-                title: "Delivery Charge",
-                amount: "3800",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "601046",
-                deliveryTime: 40,
-                minDeliveryTime: 40,
-                maxDeliveryTime: 40,
-                lastMileTravel: 0.8999999761581421,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "--",
-            totalRatings: 0,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "557580",
-            name: "DELICIOUS PARANTHA",
-            uuid: "a3a85365-1dfc-4beb-9f3e-6548808dcb0e",
-            city: "4",
-            area: "Rohini",
-            totalRatingsString: "50+ ratings",
-            cloudinaryImageId: "y9wnicph1o0ebmmsjsau",
-            cuisines: [
-                "Indian"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 42,
-            minDeliveryTime: 42,
-            maxDeliveryTime: 42,
-            slaString: "42 MINS",
-            lastMileTravel: 0.800000011920929,
-            slugs: {
-                restaurant: "delicious-parantha-rohini-rohini",
-                city: "delhi"
-            },
-            cityState: "4",
-            address: "D-7, Upper Ground floor, Vijay Vihar Phase-2, Sector -4, Rohini",
-            locality: "Sector 4",
-            parentId: 335416,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 3800,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 3800,
-                message: "",
-                title: "Delivery Charge",
-                amount: "3800",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "557580",
-                deliveryTime: 42,
-                minDeliveryTime: 42,
-                maxDeliveryTime: 42,
-                lastMileTravel: 0.800000011920929,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.8",
-            totalRatings: 50,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "601031",
-            name: "Ghee Paratha",
-            uuid: "030e1477-79fc-46f3-823d-4c917293e7fe",
-            city: "4",
-            area: "Rohini",
-            totalRatingsString: "Too Few Ratings",
-            cloudinaryImageId: "gbrjhq8hjraned2dzrkn",
-            cuisines: [
-                "Indian",
-                "Beverages"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 44,
-            minDeliveryTime: 44,
-            maxDeliveryTime: 44,
-            slaString: "44 MINS",
-            lastMileTravel: 0.8999999761581421,
-            slugs: {
-                restaurant: "ghee-and-paratha-rohini-rohini",
-                city: "delhi"
-            },
-            cityState: "4",
-            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
-            locality: "Mangolpur Kalan",
-            parentId: 356072,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "15% off",
-                shortDescriptionList: [
-                    {
-                        meta: "15% off | Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "15% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "15% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "15% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 3800,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 3800,
-                message: "",
-                title: "Delivery Charge",
-                amount: "3800",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "601031",
-                deliveryTime: 44,
-                minDeliveryTime: 44,
-                maxDeliveryTime: 44,
-                lastMileTravel: 0.8999999761581421,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "--",
-            totalRatings: 0,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "445821",
-            name: "Mr. Paratha",
-            uuid: "8823d3b1-6c00-434d-a194-23587fe14301",
-            city: "4",
-            area: "Rohini",
-            totalRatingsString: "100+ ratings",
-            cloudinaryImageId: "wspmbgpic6y902vuaai6",
-            cuisines: [
-                "Punjabi",
-                "North Indian",
-                "Indian"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 41,
-            minDeliveryTime: 41,
-            maxDeliveryTime: 41,
-            slaString: "41 MINS",
-            lastMileTravel: 0.8999999761581421,
-            slugs: {
-                restaurant: "mr-paratha-rohini-rohini",
-                city: "delhi"
-            },
-            cityState: "4",
-            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
-            locality: "Rohini",
-            parentId: 140339,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FLAT150 off",
-                shortDescriptionList: [
-                    {
-                        meta: "FLAT150 off | Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FLAT150 off | Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "₹150 OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FLAT150 off | Use FLATDEAL",
-                        discountType: "Flat",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 3800,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 3800,
-                message: "",
-                title: "Delivery Charge",
-                amount: "3800",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "445821",
-                deliveryTime: 41,
-                minDeliveryTime: 41,
-                maxDeliveryTime: 41,
-                lastMileTravel: 0.8999999761581421,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.3",
-            totalRatings: 100,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "601035",
-            name: "Sandwich Box",
-            uuid: "8f28326b-0d14-47a9-9ca6-ade7dd9baf67",
-            city: "4",
-            area: "Rohini",
-            totalRatingsString: "Too Few Ratings",
-            cloudinaryImageId: "uwmaoa8u1hy1fdwigmoa",
-            cuisines: [
-                "Fast Food"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 44,
-            minDeliveryTime: 44,
-            maxDeliveryTime: 44,
-            slaString: "44 MINS",
-            lastMileTravel: 0.8999999761581421,
-            slugs: {
-                restaurant: "sandwich-box-rohini-rohini",
-                city: "delhi"
-            },
-            cityState: "4",
-            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
-            locality: "sector 2",
-            parentId: 21365,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "15% off",
-                shortDescriptionList: [
-                    {
-                        meta: "15% off | Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "15% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "15% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "15% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 3800,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 3800,
-                message: "",
-                title: "Delivery Charge",
-                amount: "3800",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "601035",
-                deliveryTime: 44,
-                minDeliveryTime: 44,
-                maxDeliveryTime: 44,
-                lastMileTravel: 0.8999999761581421,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "--",
-            totalRatings: 0,
-            new: false
-        },
-        subtype: "basic"
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2hlhr":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$edd8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$edd8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const ShimmerUI = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "resturantcard",
-            children: Array(12).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "shimmer-cards"
-                }, index, false, {
-                    fileName: "src/Components/ShimmerUI.js",
-                    lineNumber: 7,
-                    columnNumber: 11
-                }, undefined))
-        }, void 0, false, {
-            fileName: "src/Components/ShimmerUI.js",
-            lineNumber: 3,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false);
-_c = ShimmerUI;
-exports.default = ShimmerUI;
-var _c;
-$RefreshReg$(_c, "ShimmerUI");
-
-  $parcel$ReactRefreshHelpers$edd8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eUZ6J":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fbbd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fbbd.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: "Footer"
-    }, void 0, false);
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$fbbd.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"e147e6500943b575":"786KC"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.11.1
  *
@@ -33623,7 +32747,897 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 } //#endregion
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"19tXb":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6J35F":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4f14 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4f14.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _resturantCard = require("./ResturantCard");
+var _resturantCardDefault = parcelHelpers.interopDefault(_resturantCard);
+var _shimmerUI = require("./ShimmerUI");
+var _shimmerUIDefault = parcelHelpers.interopDefault(_shimmerUI);
+var _s = $RefreshSig$();
+function filterData(searchTxt, restaurants) {
+    const filterData = restaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase().includes(searchTxt.toLowerCase()));
+    return filterData;
+}
+const Body = ()=>{
+    _s();
+    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
+    const [searchTxt, setSearchTxt] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        getRestaurants();
+    }, []);
+    async function getRestaurants() {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.9810451&lng=72.82675789999999&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    }
+    return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUIDefault.default), {}, void 0, false, {
+        fileName: "src/Components/Body.js",
+        lineNumber: 32,
+        columnNumber: 5
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "search-input",
+                        placeholder: "Search ",
+                        value: searchTxt,
+                        onChange: (e)=>{
+                            setSearchTxt(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/Components/Body.js",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "search-btn",
+                        onClick: ()=>{
+                            const data = filterData(searchTxt, allRestaurants);
+                            setFilteredRestaurants(data);
+                            console.log(data);
+                        },
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/Components/Body.js",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/Body.js",
+                lineNumber: 35,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "resturantcard",
+                children: filteredRestaurants.map((restaurant)=>{
+                    return /*#__PURE__*/ (0, _react.createElement)((0, _resturantCardDefault.default), {
+                        ...restaurant.data,
+                        key: restaurant.data.id,
+                        __source: {
+                            fileName: "src/Components/Body.js",
+                            lineNumber: 59,
+                            columnNumber: 13
+                        },
+                        __self: undefined
+                    });
+                })
+            }, void 0, false, {
+                fileName: "src/Components/Body.js",
+                lineNumber: 56,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "ApHfAgyhbqNvuDX5I3Xz/IQ3J+0=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$4f14.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ResturantCard":"iUqLI","./ShimmerUI":"2hlhr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iUqLI":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$688d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$688d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _config = require("../config");
+const ResturantCard = ({ name , cuisines , cloudinaryImageId , lastMileTravelString  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _config.IMG_CDN_URL) + cloudinaryImageId,
+                alt: "card"
+            }, void 0, false, {
+                fileName: "src/Components/ResturantCard.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "src/Components/ResturantCard.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines.join(",")
+            }, void 0, false, {
+                fileName: "src/Components/ResturantCard.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    lastMileTravelString,
+                    " minuts"
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/ResturantCard.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/ResturantCard.js",
+        lineNumber: 10,
+        columnNumber: 5
+    }, undefined);
+};
+_c = ResturantCard;
+exports.default = ResturantCard;
+var _c;
+$RefreshReg$(_c, "ResturantCard");
+
+  $parcel$ReactRefreshHelpers$688d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../config":"jtCLN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtCLN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const restaurantList = [
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "601046",
+            name: "Vada Bhau",
+            uuid: "06e71d74-04fd-4324-8817-de3dc4e7d24e",
+            city: "4",
+            area: "Rohini",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "vpxbet2mev3wxp4but0a",
+            cuisines: [
+                "Street Food",
+                "Snacks"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 40,
+            minDeliveryTime: 40,
+            maxDeliveryTime: 40,
+            slaString: "40 MINS",
+            lastMileTravel: 0.8999999761581421,
+            slugs: {
+                restaurant: "vada-bhau-rohini-rohini",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
+            locality: "Sector 2",
+            parentId: 356053,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "15% off",
+                shortDescriptionList: [
+                    {
+                        meta: "15% off | Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "15% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "15% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "15% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 3800,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 3800,
+                message: "",
+                title: "Delivery Charge",
+                amount: "3800",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "601046",
+                deliveryTime: 40,
+                minDeliveryTime: 40,
+                maxDeliveryTime: 40,
+                lastMileTravel: 0.8999999761581421,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "557580",
+            name: "DELICIOUS PARANTHA",
+            uuid: "a3a85365-1dfc-4beb-9f3e-6548808dcb0e",
+            city: "4",
+            area: "Rohini",
+            totalRatingsString: "50+ ratings",
+            cloudinaryImageId: "y9wnicph1o0ebmmsjsau",
+            cuisines: [
+                "Indian"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 42,
+            minDeliveryTime: 42,
+            maxDeliveryTime: 42,
+            slaString: "42 MINS",
+            lastMileTravel: 0.800000011920929,
+            slugs: {
+                restaurant: "delicious-parantha-rohini-rohini",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "D-7, Upper Ground floor, Vijay Vihar Phase-2, Sector -4, Rohini",
+            locality: "Sector 4",
+            parentId: 335416,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 3800,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 3800,
+                message: "",
+                title: "Delivery Charge",
+                amount: "3800",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "557580",
+                deliveryTime: 42,
+                minDeliveryTime: 42,
+                maxDeliveryTime: 42,
+                lastMileTravel: 0.800000011920929,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.8",
+            totalRatings: 50,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "601031",
+            name: "Ghee Paratha",
+            uuid: "030e1477-79fc-46f3-823d-4c917293e7fe",
+            city: "4",
+            area: "Rohini",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "gbrjhq8hjraned2dzrkn",
+            cuisines: [
+                "Indian",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 44,
+            minDeliveryTime: 44,
+            maxDeliveryTime: 44,
+            slaString: "44 MINS",
+            lastMileTravel: 0.8999999761581421,
+            slugs: {
+                restaurant: "ghee-and-paratha-rohini-rohini",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
+            locality: "Mangolpur Kalan",
+            parentId: 356072,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "15% off",
+                shortDescriptionList: [
+                    {
+                        meta: "15% off | Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "15% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "15% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "15% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 3800,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 3800,
+                message: "",
+                title: "Delivery Charge",
+                amount: "3800",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "601031",
+                deliveryTime: 44,
+                minDeliveryTime: 44,
+                maxDeliveryTime: 44,
+                lastMileTravel: 0.8999999761581421,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "445821",
+            name: "Mr. Paratha",
+            uuid: "8823d3b1-6c00-434d-a194-23587fe14301",
+            city: "4",
+            area: "Rohini",
+            totalRatingsString: "100+ ratings",
+            cloudinaryImageId: "wspmbgpic6y902vuaai6",
+            cuisines: [
+                "Punjabi",
+                "North Indian",
+                "Indian"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 41,
+            minDeliveryTime: 41,
+            maxDeliveryTime: 41,
+            slaString: "41 MINS",
+            lastMileTravel: 0.8999999761581421,
+            slugs: {
+                restaurant: "mr-paratha-rohini-rohini",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
+            locality: "Rohini",
+            parentId: 140339,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FLAT150 off",
+                shortDescriptionList: [
+                    {
+                        meta: "FLAT150 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FLAT150 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "₹150 OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FLAT150 off | Use FLATDEAL",
+                        discountType: "Flat",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 3800,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 3800,
+                message: "",
+                title: "Delivery Charge",
+                amount: "3800",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "445821",
+                deliveryTime: 41,
+                minDeliveryTime: 41,
+                maxDeliveryTime: 41,
+                lastMileTravel: 0.8999999761581421,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.3",
+            totalRatings: 100,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "601035",
+            name: "Sandwich Box",
+            uuid: "8f28326b-0d14-47a9-9ca6-ade7dd9baf67",
+            city: "4",
+            area: "Rohini",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "uwmaoa8u1hy1fdwigmoa",
+            cuisines: [
+                "Fast Food"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 44,
+            minDeliveryTime: 44,
+            maxDeliveryTime: 44,
+            slaString: "44 MINS",
+            lastMileTravel: 0.8999999761581421,
+            slugs: {
+                restaurant: "sandwich-box-rohini-rohini",
+                city: "delhi"
+            },
+            cityState: "4",
+            address: "70/1/1 1st floor, street no 15, village mangolpur kalan, near Hanuman  mandir, Rohini sector 2, Delhi-110085",
+            locality: "sector 2",
+            parentId: 21365,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "15% off",
+                shortDescriptionList: [
+                    {
+                        meta: "15% off | Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "15% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "15% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "15% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 3800,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 3800,
+                message: "",
+                title: "Delivery Charge",
+                amount: "3800",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "601035",
+                deliveryTime: 44,
+                minDeliveryTime: 44,
+                maxDeliveryTime: 44,
+                lastMileTravel: 0.8999999761581421,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        },
+        subtype: "basic"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2hlhr":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$edd8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$edd8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerUI = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "resturantcard",
+            children: Array(12).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "shimmer-cards"
+                }, index, false, {
+                    fileName: "src/Components/ShimmerUI.js",
+                    lineNumber: 7,
+                    columnNumber: 11
+                }, undefined))
+        }, void 0, false, {
+            fileName: "src/Components/ShimmerUI.js",
+            lineNumber: 3,
+            columnNumber: 5
+        }, undefined)
+    }, void 0, false);
+_c = ShimmerUI;
+exports.default = ShimmerUI;
+var _c;
+$RefreshReg$(_c, "ShimmerUI");
+
+  $parcel$ReactRefreshHelpers$edd8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eUZ6J":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fbbd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fbbd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: "Footer"
+    }, void 0, false);
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$fbbd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"19tXb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$06db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33676,26 +33690,43 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 const Error = ()=>{
+    _s();
+    const err = (0, _reactRouterDom.useRouteError)();
+    console.log(err);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Opps!!"
             }, void 0, false, {
                 fileName: "src/Components/Error.js",
-                lineNumber: 4,
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Something Want Worngs !!"
             }, void 0, false, {
                 fileName: "src/Components/Error.js",
-                lineNumber: 5,
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: err.status + " , " + err.statusText
+            }, void 0, false, {
+                fileName: "src/Components/Error.js",
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
+_s(Error, "U5GmGaAmh0j0MVy+E8WdBnjlm7s=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
 _c = Error;
 exports.default = Error;
 var _c;
@@ -33706,6 +33737,98 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire4858")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"66EYZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$84fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$84fc.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contect = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Contact"
+            }, void 0, false, {
+                fileName: "src/Components/Contact.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Provied your all information"
+            }, void 0, false, {
+                fileName: "src/Components/Contact.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = Contect;
+exports.default = Contect;
+var _c;
+$RefreshReg$(_c, "Contect");
+
+  $parcel$ReactRefreshHelpers$84fc.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dDQnB":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$40c4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$40c4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const ResturantMenu = ()=>{
+    _s();
+    const { resid  } = (0, _reactRouterDom.useParams)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: [
+                    "Resturant Id:",
+                    resid
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/ResturantMenu.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Namesta"
+            }, void 0, false, {
+                fileName: "src/Components/ResturantMenu.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(ResturantMenu, "1+C2/DyLNAWdnsc8Gy4Otg0IQ9A=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
+_c = ResturantMenu;
+exports.default = ResturantMenu;
+var _c;
+$RefreshReg$(_c, "ResturantMenu");
+
+  $parcel$ReactRefreshHelpers$40c4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire4858")
 
 //# sourceMappingURL=index.7271efb6.js.map
